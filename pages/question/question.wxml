@@ -1,0 +1,7 @@
+<!--pages/question/question.wxml-->
+<view class="person-list">
+  <view class="list-item">
+    <image class="item-image" src="../../images/question.png"></image>
+    <text class="item-text" bindtap='add_question'>添加题目</text>
+  </view>
+</view>

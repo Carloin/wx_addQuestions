@@ -1,0 +1,400 @@
+/* pages/add_question/add_question.wxss */
+page {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  background-color: #f3f3f3;
+}
+
+.questions_content {
+  /* border: solid 1px white; */
+  background-color: rgb(255, 255, 255);
+  /* margin: auto; */
+  margin: 31rpx 24rpx;
+
+  width: 702rpx;
+  height: auto;
+  border-radius: 10rpx;
+  box-shadow: 0 0 9rpx 5rpx rgb(227, 227, 247);
+  position: relative;
+}
+
+.questions_options {
+  /* border: solid 1px white; */
+  background-color: white;
+  /* margin: auto; */
+  margin: 35rpx 25rpx;
+
+  width: 702rpx;
+  height: auto;
+  border-radius: 10rpx;
+  box-shadow: 0 0 9rpx 5rpx rgb(227, 227, 247);
+  position: relative;
+}
+
+.questions_answers {
+  /* border: solid 1px white; */
+  background-color: white;
+  /* margin: auto; */
+  margin: 35rpx 25rpx 140rpx;
+
+  width: 700rpx;
+  height: auto;
+  border-radius: 10rpx;
+  box-shadow: 0 0 9rpx 5rpx rgb(227, 227, 247);
+  position: relative;
+}
+
+.ques_title {
+  font-weight: bold;
+  color: #333;
+  font-family: PingFangSC-Regular, sans-serif;
+  font-size: 30rpx;
+  line-height: 30rpx;
+  vertical-align: text-top;
+  top: 30rpx;
+  left: 30rpx;
+  position: absolute;
+}
+
+.ques_content {
+  font-weight: normal;
+  color: #333333;
+  font-family: PingFangSC-Regular, sans-serif;
+  font-size: 28rpx;
+  line-height: 28rpx;
+  vertical-align: text-top;
+  top: 90rpx;
+  left: 30rpx;
+  /* position: absolute; */
+}
+
+textarea {
+  cursor: auto;
+  width: 300px;
+  height: 80px;
+  display: block;
+  position: relative;
+  overflow: hidden;
+}
+
+/*上传图片  */
+.question-images {
+  display: flex;
+  box-sizing: border-box;
+  flex-wrap: wrap;
+  /* margin: auto; */
+  margin: 45px auto auto;
+  /*position: absolute; */
+
+}
+
+.q-image-wrap {
+  width: 165rpx;
+  height: 165rpx;
+  margin: 20rpx 30rpx 15rpx;
+  float: left;
+
+  overflow: hidden;
+}
+
+.q-image-remover {
+  width: 38rpx;
+  height: 38rpx;
+
+  position: absolute;
+
+  margin: -190rpx auto auto 140rpx;
+
+
+}
+
+.q-image-remover icon {
+  position: absolute;
+  left: 12rpx;
+  bottom: 12rpx;
+
+}
+
+.q-image-remover image {
+  width: 38rpx;
+  height: 38rpx;
+  z-index: 3;
+
+  margin: 310rpx auto auto -490rpx;
+
+
+}
+
+.question-images .uploadImgBtn {
+  width: 160rpx;
+  height: 160rpx;
+  text-align: center;
+  line-height: 140rpx;
+  border: 1rpx dashed #999;
+  /* float: left;*/
+  margin: 20rpx 30rpx 30rpx;
+
+
+}
+
+.uploadImgBtn icon {
+  font-size: 80rpx;
+  color: #999;
+}
+
+.uploadImgBtn image {
+  width: 159rpx;
+  height: 159rpx;
+  /* display: inline-block;
+  overflow: hidden; */
+
+}
+
+.q-image {
+  width: 170rpx;
+  height: 170rpx;
+  display: inline-block;
+  overflow: hidden;
+  display: flex;
+
+}
+
+.questions_answers .ques_title {
+  font-weight: bold;
+  color: #333;
+  font-family: PingFangSC-Regular, sans-serif;
+  font-size: 30rpx;
+  line-height: 30rpx;
+  vertical-align: text-top;
+  top: 30rpx;
+  left: 30rpx;
+  position: absolute;
+}
+
+/* .questions_answers image{
+    width: 160rpx;
+ 
+height: 160rpx;
+display: inline-block;
+overflow: hidden;
+
+  } */
+.questions_answers .question-images {
+  display: flex;
+  box-sizing: border-box;
+  flex-wrap: wrap;
+
+  margin: 45px auto auto;
+
+
+}
+
+.questions_answers .q-image-wrap {
+  width: 165rpx;
+  height: 165rpx;
+  margin: 20rpx 30rpx 15rpx;
+  float: left;
+
+  overflow: hidden;
+}
+
+.questions_answers .q-image-remover {
+  width: 38rpx;
+  height: 38rpx;
+
+  position: absolute;
+
+  margin: -190rpx auto auto 140rpx;
+
+
+}
+
+.questions_answers .q-image-remover icon {
+  position: absolute;
+  left: 12rpx;
+  bottom: 12rpx;
+
+}
+
+.questions_answers .q-image-remover image {
+  width: 38rpx;
+  height: 38rpx;
+  z-index: 3;
+
+  margin: 310rpx auto auto -490rpx;
+
+
+}
+
+.questions_answers .question-images .uploadImgBtn {
+  width: 160rpx;
+  height: 160rpx;
+  text-align: center;
+  line-height: 140rpx;
+  border: 1rpx dashed #999;
+
+  margin: 20rpx 30rpx 30rpx;
+
+
+}
+
+.questions_answers .uploadImgBtn icon {
+  font-size: 80rpx;
+  color: #999;
+}
+
+.questions_answers .uploadImgBtn image {
+  width: 159rpx;
+  height: 159rpx;
+
+
+}
+
+.questions_answers .q-image {
+  width: 170rpx;
+  height: 170rpx;
+  display: inline-block;
+  overflow: hidden;
+  display: flex;
+
+}
+
+.questions_options .opts_title {
+  font-weight: bold;
+  color: #333;
+  font-family: PingFangSC-Regular, sans-serif;
+  font-size: 30rpx;
+  line-height: 30rpx;
+  vertical-align: text-top;
+  top: 30rpx;
+  left: 30rpx;
+  position: absolute;
+}
+
+.questions_options image {
+  width: 36rpx;
+  height: 36rpx;
+  display: inline-block;
+  overflow: hidden;
+  position: absolute;
+  margin: 5rpx;
+
+}
+
+.addopts {
+  /* position: absolute; */
+  /* margin: auto 20rpx auto; */
+  padding: 60rpx 108rpx 30rpx;
+
+
+}
+
+.optstext {
+  margin: 10rpx 50rpx;
+}
+
+.create-li {
+
+  border: 2rpx solid #E0E0E0;
+
+  /* height: 92rpx; */
+  overflow: hidden;
+  border-radius: 2%;
+
+
+}
+
+.optslist {
+
+  display: inline-block;
+  margin: 80rpx 100rpx -30rpx;
+}
+
+.delopts {
+  /* width: 36rpx;
+    height: 36rpx; */
+  margin: -50rpx -15rpx auto 530rpx;
+
+}
+
+.delopts image {
+  width: 36rpx;
+  height: 36rpx;
+  display: inline-block;
+  overflow: hidden;
+  position: absolute;
+  margin: 5rpx;
+
+}
+
+.create-li textarea {
+  cursor: auto;
+
+  font-size: 28rpx;
+  line-height: 28rpx;
+  vertical-align: text-top;
+  border-radius: 2%;
+  width: 408rpx;
+  overflow: hidden;
+  padding: 25rpx 15rpx;
+
+
+}
+
+.insertimg {
+  display: inline-block;
+  position: absolute;
+  /* top: 35%;
+left: 80%; */
+  margin: -60rpx 450rpx;
+
+
+}
+
+.insertimg image {
+  width: 36rpx;
+  height: 36rpx;
+  display: inline-block;
+  overflow: hidden;
+  position: absolute;
+  margin: 5rpx;
+}
+
+.checked_opt image {
+  width: 58rpx;
+  height: 58rpx;
+  margin: 10rpx 30rpx 10rpx -70rpx;
+
+}
+
+.save_btn {
+
+  line-height: 60rpx;
+  border-radius: 98rpx;
+  font-size: 28rpx;
+  background-color: #15c19b;
+  color: #fff;
+  font-weight: 500;
+  position: fixed;
+  z-index: 10;
+  bottom: 0;
+  margin: 20rpx 10rpx;
+  left: 10%;
+}
+
+.save_btn::after {
+  border-radius: 98rpx;
+  border: 0;
+
+
+}
+
+.btn_bg {
+  background-color: #fff;
+  width: 100%;
+  height: 150rpx;
+  bottom: 0;
+  position: fixed;
+
+}

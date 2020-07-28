@@ -1,0 +1,98 @@
+<!--pages/add_question/add_question.wxml-->
+
+<scroll-view scroll-y="true" bindtouchstart="touchStart" bindtouchend="touchEnd">
+	<!-- 题目内容 -->
+	<view class="questions_content">
+
+		<view class="ques_title">题目内容（单选题）</view>
+		<textarea class="ques_content" placeholder="这是题目的内容，这是题目的内容，9张图片" maxlength="-1"></textarea>
+		<!-- 添加照片 -->
+		<!-- <text class='pf-type'>附件上传（仅支持图片）</text> -->
+		<view class="question-images clearFloat">
+			<block wx:for="{{images}}" wx:key="*this">
+				<view class="q-image-wrap">
+					<!-- 图片缩略图  -->
+					<image class="q-image" src="{{item}}" mode="aspectFill" data-idx="{{index}}" bindtap="handleImagePreview"></image>
+					<!-- 移除图片的按钮  -->
+					<!-- <view class="q-image-remover" data-idx="{{index}}" bindtap="removeImage">
+            <icon class='iconfont icon-guanbi'></icon> -->
+					<image src='../../images/delete-icon.png' class="q-image-remover" data-idx="{{index}}" bindtap="removeImage"></image>
+
+					<!-- </view> -->
+				</view>
+			</block>
+			<view class='uploadImgBtn' bindtap="chooseImage" wx:if="{{images.length < 10}}">
+				<icon class='iconfont icon-jiahao'></icon>
+				<image src='../../images/addcamera.png'></image>
+			</view>
+		</view>
+	</view>
+
+	<!-- 题目选项 -->
+	<view class="questions_options">
+		<view class="opts_title">选项</view>
+
+		<block wx:for="{{lists}}" wx:key="{{index}}">
+
+			<view class="optslist">
+				<!-- <textarea class='create-li' data-id="{{index}}" placeholder="选项"  bindinput='bindKeyInput'></textarea> -->
+				<view class="class='create-li'">
+
+					<!-- <radio value="{{radioindex}}">{{radioindex}}</radio> -->
+					<!-- <view class="checked_opt" bindtap="changeImg"> -->
+					<view class="checked_opt">
+
+						<image src="../../images/a.png"></image>
+						<!-- <image src="../../images/checked-a.png" style="display:{{count%2==0?'none':'block'}}"></image> -->
+						<image src="../../images/checked-a.png" style="display:none"></image>
+
+					</view>
+					<textarea class="textareacont" data-id="{{index}}" name="textarea" placeholder="输入内容选项" auto-height="true" maxlength="-1"></textarea>
+					<view class="insertimg">
+						<image src="../../images/icon-pic.png"></image>
+					</view>
+				</view>
+
+				<view class="delopts">
+					<image src="../../images/deleteopts.png" bindtap="delList" bindinput="bindinput" data-id="{{index}}"></image>
+				</view>
+			</view>
+		</block>
+
+		<view class="addopts">
+			<image src="../../images/addopts.png" bindtap='addList' data-id="{{index}}"></image>
+			<label class="optstext">添加选项</label>
+		</view>
+	</view>
+	<!-- 题目答案解析 -->
+	<view class="questions_answers">
+		<view class="ques_title">题目解析（选填）</view>
+		<textarea class="ques_content" placeholder="这是题目的解析，这是题目的解析，9张图片" maxlength="-1"></textarea>
+		<!-- 添加照片 -->
+		<!-- <text class='pf-type'>附件上传（仅支持图片）</text> -->
+		<view class="question-images clearFloat">
+			<block wx:for="{{ansimages}}" wx:key="*this">
+				<view class="q-image-wrap">
+					<!-- 图片缩略图  -->
+					<image class="q-image" src="{{item}}" mode="aspectFill" data-idx="{{index}}" bindtap="anshandleImagePreview"></image>
+					<!-- 移除图片的按钮  -->
+					<!-- <view class="q-image-remover" data-idx="{{index}}" bindtap="removeImage">
+            <icon class='iconfont icon-guanbi'></icon> -->
+					<image src='../../images/delete-icon.png' class="q-image-remover" data-idx="{{index}}" bindtap="ansremoveImage"></image>
+
+					<!-- </view> -->
+				</view>
+			</block>
+			<view class='uploadImgBtn' bindtap="anschooseImage" wx:if="{{ansimages.length < 10}}">
+				<icon class='iconfont icon-jiahao'></icon>
+				<image src='../../images/addcamera.png'></image>
+			</view>
+		</view>
+	</view>
+</scroll-view>
+
+<!-- 底部按钮固定 -->
+<view wx:if="{{ scrollStop==true}}">
+	<view class="btn_bg"></view>
+	<button class="save_btn" style="width:80%;" bindtap="pub_button">保存</button>
+</view>

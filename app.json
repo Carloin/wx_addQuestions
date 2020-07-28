@@ -1,0 +1,46 @@
+{
+  "pages":[
+    "pages/question/question",
+    "pages/add_question/add_question",
+    "pages/index/index",
+    "pages/my_home/my_home"
+   
+   
+  ],
+  "window":{
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "趣练习",
+    "navigationBarTextStyle": "black",
+    "backgroundColor": "#fff"
+   
+  },
+  "tabBar": {
+    "color": "858585",
+    "selectedColor": "#7B68EE",
+    "backgroundColor": "#fff",
+    "borderStyle": "white",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "主页",
+        "iconPath": "images/首页.png",
+        "selectedIconPath": "images/首页2.png"
+      },
+      {
+        "pagePath": "pages/question/question",
+        "text": "题目",
+        "iconPath": "images/题目2.png",
+        "selectedIconPath": "images/question.png"
+      },
+      {
+        "pagePath": "pages/my_home/my_home",
+        "text": "我的",
+        "iconPath": "images/我的2.png",
+        "selectedIconPath": "images/我的.png"
+      }
+    ]
+  },
+  "style": "v2",
+  "sitemapLocation": "sitemap.json"
+}
